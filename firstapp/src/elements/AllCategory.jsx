@@ -68,15 +68,12 @@ const AllCategory = () => {
                 style={{ height: "270px" }}
               >
                 <img src={`http://localhost:3001/${item.imageUrl}`} />
-                {/* <h5 className="card-title text-primary">{item.title}</h5> */}
+
                 <a href={`/filterproducts/${item._id}`} class="link-primary">
                   {item.title}
                 </a>
 
                 <p className="card-text text-dark">{item.detail}</p>
-                {/* <button type="button" class="btn3 btn-outline-primary">
-                  Add to Cart
-                </button> */}
               </div>
             ))
           ) : (
