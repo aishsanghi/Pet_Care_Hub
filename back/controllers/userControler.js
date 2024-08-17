@@ -1,4 +1,5 @@
 import userModel from "../models/userModel.js";
+import nodemailer from "nodemailer";
 
 export const registerUser = async (req, res) => {
   const { name, number, email, password, role } = req.body;
@@ -56,6 +57,64 @@ export const loginUser = async (req, res) => {
     res.status(200).json({
       message: "Login Successful",
       loggedUser: existingUser,
+    });
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+export const forgotpassword = async (req, res) => {
+  const { email } = req.body;
+  console.log(email);
+  try {
+    const checkmail = await userModel.findOne({ email: email });
+    if (!checkmail) {
+      return res.status(400).json({
+        message: "user not existed",
+      });
+    }
+    const otp = Math.floor(100000 + Math.random() * 900000).toString();
+
+    // Set OTP expiration time (5 minutes from now)
+    const otpExpiration = Date.now() + 5 * 60 * 1000;
+
+    // Save OTP and its expiration to the user's record
+    checkmail.resetOtp = otp;
+    checkmail.resetOtpExpires = otpExpiration;
+    checkmail.save();
+
+    // Create a Nodemailer transporter using Gmail service
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: "asanghi04@gmail.com",
+        pass: "unyn gqqy ddkr eoda",
+      },
+    });
+
+    // Define the email options
+    const mailOptions = {
+      from: "asanghi04@gmail.com",
+      to: checkmail.email,
+      subject: "Your OTP for Password Reset",
+      text: `Your OTP for password reset is: ${otp}. It is valid for 5 minutes.`,
+      // text: "I m Sorry",
+    };
+
+    // Send the email with the OTP
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.error("Error sending email:", error);
+        return res.status(400).send({
+          Status: "Error",
+          message: "Failed to send OTP. Please try again later.",
+        });
+      } else {
+        return res.status(200).send({
+          Status: "Success",
+          message: "OTP sent successfully.",
+        });
+      }
     });
   } catch (error) {
     console.log(error.message);

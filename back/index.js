@@ -14,6 +14,7 @@ const port = process.env.PORT || 3001;
 
 // middleware to parse json req
 app.use(express.json());
+app.use(express.static('build'));
 
 //enable cross origin(cors)
 app.use(cors());

@@ -116,7 +116,7 @@ const FilterProducts = ({ loggeduser }) => {
                 style={{ height: "344px" }}
               >
                 {/* <img src={dummy} className="card-img-top" alt="..." /> */}
-                <img src={`http://localhost:3001//${item.imageUrl}`} />
+                <img src={`http://localhost:3001/${item.imageUrl}`} />
                 <h5 className="card-title text-primary">{item.title}</h5>
                 <h6
                   style={{ textAlign: "-webkit-center" }}

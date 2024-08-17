@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ed194590.css",
+    "main.js": "/static/js/main.792888f5.js",
+    "static/js/453.c525d7c0.chunk.js": "/static/js/453.c525d7c0.chunk.js",
+    "static/media/about_1.jpg": "/static/media/about_1.7e575d39cf56795ef106.jpg",
+    "static/media/petshop1.jpg": "/static/media/petshop1.c86cc544c15e620039c9.jpg",
+    "static/media/shop2.jpg": "/static/media/shop2.039c29c0c6b892f560ea.jpg",
+    "static/media/about3.jpg": "/static/media/about3.a4e500f64063bb2510c3.jpg",
+    "static/media/about2.jpg": "/static/media/about2.de825228ab5dd79850dc.jpg",
+    "static/media/dogeating.jpg": "/static/media/dogeating.d25a8557edf5bd704ac4.jpg",
+    "static/media/register_icon.jpg": "/static/media/register_icon.e3b4eb20d86ffae561e0.jpg",
+    "static/media/vendorbg.jpg": "/static/media/vendorbg.c5fbaf3dd33f8bc0580b.jpg",
+    "static/media/petcareemoji.png": "/static/media/petcareemoji.351702acd013fe816a95.png",
+    "static/media/dogcare.webp": "/static/media/dogcare.04df01f82f15a688f261.webp",
+    "static/media/supplier.webp": "/static/media/supplier.4e6902a1c83dd97c0289.webp",
+    "static/media/back_img.avif": "/static/media/back_img.cfd4f2e8f036b98fd003.avif",
+    "static/media/login.webp": "/static/media/login.9c38887cb8a6a11301af.webp",
+    "static/media/profile_photo.webp": "/static/media/profile_photo.c25f7884dc4b426be9dd.webp",
+    "index.html": "/index.html",
+    "main.ed194590.css.map": "/static/css/main.ed194590.css.map",
+    "main.792888f5.js.map": "/static/js/main.792888f5.js.map",
+    "453.c525d7c0.chunk.js.map": "/static/js/453.c525d7c0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed194590.css",
+    "static/js/main.792888f5.js"
+  ]
+}

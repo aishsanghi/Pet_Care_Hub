@@ -42,6 +42,7 @@ import Addvendor from "./admin/expert/Addvendor";
 import VendorProfile from "./vendor/VendorProfile";
 import VendorUpdatePro from "./vendor/product/VendorUpdatePro";
 import URL from "./config";
+import ForgotUserPass from "./elements/ForgotUserPass";
 
 function App() {
   const [loggeduser, setloggeduser] = useState(null);
@@ -187,6 +188,7 @@ function App() {
             path="/vendorupdateproduct/:proId"
             element={<VendorUpdatePro />}
           />
+          <Route path="/forgotpassword" element={<ForgotUserPass />} />
         </Routes>
         <Footer_ />
       </BrowserRouter>

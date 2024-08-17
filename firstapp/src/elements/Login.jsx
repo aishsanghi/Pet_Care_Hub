@@ -90,7 +90,7 @@ const Login = ({ setloggeduser }) => {
         </div>
         <div className="register_form m-auto">
           <form onSubmit={handlesubmit}>
-            <div className="input-group_reg mb-3">
+            <div className="input-group_reg mb-3" style={{ width: "73%" }}>
               <input
                 name="email"
                 value={formData.email}
@@ -103,7 +103,7 @@ const Login = ({ setloggeduser }) => {
                 aria-describedby="basic-addon1"
               />
             </div>
-            <div className="input-group_reg mb-3">
+            <div className="input-group_reg mb-3" style={{ width: "73%" }}>
               <input
                 name="password"
                 value={formData.password}
@@ -116,9 +116,14 @@ const Login = ({ setloggeduser }) => {
                 aria-describedby="basic-addon1"
               />
             </div>
-
+            <p>
+              <a href="/forgotpassword">Forgot Password?</a>
+            </p>
             <div className="vendor_register">
-              <a href="/loginVendor" style={{ color: "currentcolor" }}>
+              <a
+                href="/loginVendor"
+                style={{ color: "currentcolor", textDecoration: "unset" }}
+              >
                 {" "}
                 Login as Vendor
               </a>
